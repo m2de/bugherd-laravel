@@ -1,11 +1,35 @@
-# Boilerplate repository for creating PHP Laravel and JS Vue NPM Packages
+# Bugherd Installation Helper for Laravel
 
-This boilderplate is ready to be published to Packagist and NPM JS.
+A Laravel Helper package to install the [Bugherd](https://www.bugherd.com/) script
 
-## Usage
+## Installation
 
-Simply fork this repository and customise. Search and Replace (case-sensitive) `M2de` and `Bugherd\\Laravel` as well as `m2de` and `bugherd-laravel` to get started.
+```sh
+composer install m2de/bugherd-laravel
+```
 
-## Publishing
+Add your Bugherd project ID to your .env or the bugherd.php config.
 
-Always use `npm version (major|minor|patch)` to publish new versions (even when working with PHP). This will automatically create the git tag for you which Packagist will then pick up for version publishing.
+```sh
+# .env
+BUGHERD_PROJECT_ID=abcdef123456gh
+```
+
+## Usage
+
+Inside your layout or blade template add the blade helper where you want to publish the bugherd installation script.
+
+```php
+// resources/views/layouts/default.blade.php
+
+<head>
+...
+@bugherd
+</head>
+```
+
+## Configuration
+
+By default the Bugherd script will only output in `staging` environments, however you can customise this in the config of this package.
+
+You may publish the config and views to customise them if required.
