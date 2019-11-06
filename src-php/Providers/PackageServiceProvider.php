@@ -16,7 +16,6 @@ class PackageServiceProvider extends ServiceProvider
     public function boot(Router $router)
     {
         $this->bootViews();
-        $this->bootAssets();
         $this->registerBladeComponents();
         $this->publishConfig();
     }
@@ -44,18 +43,6 @@ class PackageServiceProvider extends ServiceProvider
         ]);
     }
 
-    /**
-     * Define publishable assets
-     *
-     * @return void
-     */
-    private function bootAssets()
-    {
-        $this->publishes([
-            __DIR__.'/../Resources/assets/js' => resource_path('assets/js/vendor/bugherd'),
-        ], 'js');
-    }
-
     private function registerBladeComponents()
     {
         Blade::include('bugherd::script', 'bugherd');
@@ -79,6 +66,6 @@ class PackageServiceProvider extends ServiceProvider
      */
     private function getConfigPath()
     {
-        return __DIR__.'/../Config/config.php';
+        return __DIR__.'/../config.php';
     }
 }

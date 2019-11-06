@@ -5,14 +5,14 @@ A Laravel Helper package to install the [Bugherd](https://www.bugherd.com/) scri
 ## Installation
 
 ```sh
-composer install m2de/bugherd-laravel
+composer require m2de/bugherd-laravel
 ```
 
 Add your Bugherd project ID to your .env or the bugherd.php config.
 
 ```sh
 # .env
-BUGHERD_PROJECT_ID=abcdef123456gh
+BUGHERD_PROJECT_KEY=abcdef123456gh
 ```
 
 ## Usage
