@@ -66,6 +66,6 @@ class PackageServiceProvider extends ServiceProvider
      */
     private function getConfigPath()
     {
-        return __DIR__.'/../config.php';
+        return __DIR__.'/../bugherd.php';
     }
 }
