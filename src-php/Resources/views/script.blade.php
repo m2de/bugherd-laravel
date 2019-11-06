@@ -2,7 +2,7 @@
     @if(\App::environment(config('bugherd.environments')))
         <script
             type="text/javascript" 
-            rc="https://www.bugherd.com/sidebarv2.js?apikey={{ $key }}"
+            src="https://www.bugherd.com/sidebarv2.js?apikey={{ $key }}"
             async="true">
         </script>
     @endif
