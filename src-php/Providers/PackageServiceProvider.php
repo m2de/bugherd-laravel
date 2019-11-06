@@ -58,6 +58,8 @@ class PackageServiceProvider extends ServiceProvider
         $this->publishes([
             $this->getConfigPath() => config_path('bugherd.php'),
         ], 'config');
+
+        $this->mergeConfigFrom($this->getConfigPath(), 'bugherd');
     }
     /**
      * Get local package configuration path.
